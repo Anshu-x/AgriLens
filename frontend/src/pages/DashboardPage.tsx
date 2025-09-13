@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import './pages.css';
 import heatmapImg from '../images/heatmap.jpeg';
 import ChatbotSection from './ChatbotSection';
+import '../style/DashboardPage.css';
 
 
 // CNN+LSTM Types
