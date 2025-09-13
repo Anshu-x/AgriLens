@@ -599,7 +599,18 @@ const DashboardPage: React.FC = () => {
           </div>
         </section>
 
-     <ChatbotSection cnnLstmAnalysis={cnnLstmAnalysis} kpis={kpis} />
+     <ChatbotSection
+       cnnLstmAnalysis={
+         cnnLstmAnalysis
+           ? {
+               crop_health: cnnLstmAnalysis.crop_health,
+               water_stress: cnnLstmAnalysis.water_stress,
+               yield_prediction: cnnLstmAnalysis.yield_prediction,
+             }
+           : undefined
+       }
+       kpis={kpis}
+     />
 
 
 
