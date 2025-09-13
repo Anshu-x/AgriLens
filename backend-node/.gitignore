@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+logs/*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+
+# Build
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Tests
+jest-html-reporters-*.html
+
+# VSCode / IDE configs
+.vscode/
+.idea/
+*.swp
