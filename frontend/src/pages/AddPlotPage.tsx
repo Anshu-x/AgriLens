@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import '../style/AddPlotPage.css';
 import {
   GoogleMap,
   useJsApiLoader,
