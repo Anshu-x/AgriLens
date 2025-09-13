@@ -1,0 +1,249 @@
+.dashboard-container {
+  min-height: 100vh;
+  width: 100px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.dashboard-header {
+  background: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 28px;
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: -0.5px;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+  transform: translateY(-2px);
+}
+
+.dashboard-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 50px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-section h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.welcome-section p {
+  font-size: 18px;
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+.demo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.demo-card {
+  background: white;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.demo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.demo-card h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.demo-card p {
+  color: #7f8c8d;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.coming-soon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);
+}
+
+.coming-soon h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.coming-soon p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+.heatmap-wrapper {
+  width: 400px;   /* set heatmap box width */
+  height: 400px;  /* set heatmap box height */
+  overflow: hidden;
+  border-radius: 12px; /* optional rounded edges */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* optional styling */
+}
+
+.heatmap-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps proportions while covering box */
+  display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 16px;
+  }
+  
+  .logo h1 {
+    font-size: 20px;
+  }
+  
+  .logout-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .dashboard-main {
+    padding: 30px 16px;
+  }
+  
+  .welcome-section {
+    padding: 30px 20px;
+  }
+  
+  .welcome-section h2 {
+    font-size: 28px;
+  }
+  
+  .welcome-section p {
+    font-size: 16px;
+  }
+  
+  .demo-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .demo-card {
+    padding: 24px 20px;
+  }
+  
+  .card-icon {
+    font-size: 40px;
+  }
+  
+  .demo-card h3 {
+    font-size: 18px;
+  }
+  
+  .demo-card p {
+    font-size: 14px;
+  }
+  
+  .coming-soon {
+    padding: 30px 20px;
+  }
+  
+  .coming-soon h3 {
+    font-size: 20px;
+  }
+  
+  .coming-soon p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h2 {
+    font-size: 24px;
+  }
+  
+  .demo-card {
+    padding: 20px 16px;
+  }
+  
+  .card-icon {
+    font-size: 36px;
+  }
+}
