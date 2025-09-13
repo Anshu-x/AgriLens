@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import './pages.css';
 import heatmapImg from '../images/heatmap.jpeg';
+import ChatbotSection from './ChatbotSection';
+
 
 // CNN+LSTM Types
 interface CNNLSTMAnalysis {
@@ -114,6 +116,8 @@ const DashboardPage: React.FC = () => {
       zoom
     };
   };
+
+  
 
   const calculatePolygonArea = (polygonPath: any[]) => {
     if (polygonPath.length < 3) return 0;
@@ -595,36 +599,12 @@ const DashboardPage: React.FC = () => {
           </div>
         </section>
 
-        <section className="card chatbot" aria-label="CNN+LSTM Assistant">
-          <div className="chatbot-head">
-            <h3>🧠 CNN+LSTM Assistant</h3>
-            <span className="status online">
-              {cnnLstmAnalysis ? `${kpis.modelParams.toLocaleString()} params` : 'Ready'}
-            </span>
-          </div>
-          <div className="chatbot-messages" role="log" aria-live="polite">
-            <div className="msg bot">
-              <span className="avatar" aria-hidden>🤖</span>
-              <div className="bubble">
-                {cnnLstmAnalysis ? (
-                  <>
-                    🧠 <strong>CNN+LSTM Analysis Complete!</strong><br/>
-                    • CNN detected {cnnLstmAnalysis.crop_health.toFixed(1)}% spatial health<br/>
-                    • LSTM found {cnnLstmAnalysis.water_stress.toFixed(1)}% water stress patterns<br/>
-                    • Fusion predicts {cnnLstmAnalysis.yield_prediction.toFixed(1)}% yield<br/>
-                    Ask me about crop health, water management, or pest risks!
-                  </>
-                ) : (
-                  "Hi! I'm powered by CNN+LSTM fusion models. Draw plots to get AI analysis of your fields!"
-                )}
-              </div>
-            </div>
-          </div>
-          <form className="chatbot-input" onSubmit={(e) => e.preventDefault()}>
-            <input type="text" placeholder="Ask about CNN analysis..." aria-label="Message input" />
-            <button className="btn primary" type="submit">Send</button>
-          </form>
-        </section>
+     <ChatbotSection cnnLstmAnalysis={cnnLstmAnalysis} kpis={kpis} />
+
+
+
+
+
 
         <section className="card hero">
           <div className="hero-left">

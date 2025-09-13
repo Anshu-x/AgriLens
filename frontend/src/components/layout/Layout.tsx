@@ -70,7 +70,6 @@ const Layout: React.FC = () => {
                 <ul className="agl-drawer-list">
                   <li><NavLink to="/dashboard" className={({ isActive }) => `agl-drawer-link ${isActive ? 'current' : ''}`}>Dashboard</NavLink></li>
                   <li><NavLink to="/add-plot" className={({ isActive }) => `agl-drawer-link ${isActive ? 'current' : ''}`}>Add Plot</NavLink></li>
-                  <li><NavLink to="/analytics" className={({ isActive }) => `agl-drawer-link ${isActive ? 'current' : ''}`}>Analytics</NavLink></li>
                   <li><NavLink to="/reports" className={({ isActive }) => `agl-drawer-link ${isActive ? 'current' : ''}`}>Reports</NavLink></li>
                   <li><NavLink to="/profile" className={({ isActive }) => `agl-drawer-link ${isActive ? 'current' : ''}`}>Profile</NavLink></li>
                 </ul>
